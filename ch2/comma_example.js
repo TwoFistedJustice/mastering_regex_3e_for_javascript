@@ -38,26 +38,22 @@ let I_quiz_commification_without_looking_does_it_work = /(\d)(\d\d\d)+\b/g
 
 
 let A_big_number_quiz_result = A_big_number.replace(I_quiz_commification_without_looking_does_it_work,",")
-// let A_big_number_quiz_result_array = [...A_big_number.matchAll(I_quiz_commification_without_looking_does_it_work)]
-// console.log ("start")
-// console.log (A_big_number_quiz_result_array)
+let A_big_number_quiz_result_array = [...A_big_number.matchAll(I_quiz_commification_without_looking_does_it_work)]
 
+const exec_IA = I_quiz_commification_without_looking_does_it_work.exec(A_big_number)
+const exec_IAA = I_quiz_commification_without_looking_does_it_work.exec(AA_big_number_with_text)
 
+const AA_big_number_quiz_result = AA_big_number_with_text.replace(I_quiz_commification_without_looking_does_it_work,",")
 
-let AA_big_number_quiz_result = AA_big_number_with_text.replace(I_quiz_commification_without_looking_does_it_work,",")
-
-//why is exec not working now?
-
-
-console.log ("\nThe pattern: /(\\d)(\\d\\d\\d)+\\b/")
+console.log ("start")
+console.log (`\nThe pattern: ${I_quiz_commification_without_looking_does_it_work}`)
 console.log ("matches the characters not the positions, so it replaces everything that it matches")
 console.log ("\nWe started with: " + A_big_number);
 console.log ("What we want: 123,456,789")
 console.log ("What we got: "+ A_big_number_quiz_result)
 console.log ("\nWas there any match at all? " )
 console.log (I_quiz_commification_without_looking_does_it_work.test(A_big_number))
-console.log (I_quiz_commification_without_looking_does_it_work.exec(A_big_number))
-
+console.log (exec_IA)
 
 console.log ("\nWe started with: " + AA_big_number_with_text);
 console.log ("What we want: 123,456,789Hz")
@@ -65,4 +61,4 @@ console.log ("What we got: "+ AA_big_number_quiz_result)
 console.log ("Nothing matched so nothing got replaced.")
 console.log ("\nWas there any match at all? " )
 console.log (I_quiz_commification_without_looking_does_it_work.test(AA_big_number_with_text))
-console.log (I_quiz_commification_without_looking_does_it_work.exec(AA_big_number_with_text))
+console.log (exec_IAA)
