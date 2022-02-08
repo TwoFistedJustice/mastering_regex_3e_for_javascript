@@ -1,16 +1,12 @@
 // NOTE: a caret " ^ " in a comment indicates a match POSITION
 
-let A_big_number = "123456789";
-let AA_big_number_with_text = "123456789Hz";
-let B_some_digits_on_the_left = /(?<=\d)/
-
-let C_matches_triple_digits = /(\d\d\d)+$/
-
-let D_matches_LOCATIONS_of_triple_digits =  /(?=(\d\d\d)+$)/// ^123^456^789
-let E_matches_LOCATIONS_of_triple_digits_on_the_right_with_at_least_some_on_the_left =  /(?<=\d)(?=(\d\d\d)+$)/// 123^456^789
-
-
-let F_more_efficient_matches_LOCATIONS_of_triple_digits_on_the_right_with_at_least_some_on_the_left =  /(?<=\d)(?=(?:\d\d\d)+$)/// 123^456^789 - non-capturing is faster
+const A_big_number = "123456789";
+const AA_big_number_with_text = "123456789Hz";
+const B_some_digits_on_the_left = /(?<=\d)/
+const C_matches_triple_digits = /(\d\d\d)+$/
+const D_matches_LOCATIONS_of_triple_digits =  /(?=(\d\d\d)+$)/// ^123^456^789
+const E_matches_LOCATIONS_of_triple_digits_on_the_right_with_at_least_some_on_the_left =  /(?<=\d)(?=(\d\d\d)+$)/// 123^456^789
+const F_more_efficient_matches_LOCATIONS_of_triple_digits_on_the_right_with_at_least_some_on_the_left =  /(?<=\d)(?=(?:\d\d\d)+$)/// 123^456^789 - non-capturing is faster
 
 
 /* "Look" Types p66
@@ -22,7 +18,7 @@ Negative lookahead (?!)
 * */
 
 
-let G_same_as_F_swap_in_neg_lookahead_for_$ =  /(?<=\d)(?=(?:\d\d\d)+(?!\d))/// 123^456^789^Hz - use negative lookahead to exclude numbers
+const G_same_as_F_swap_in_neg_lookahead_for_$ =  /(?<=\d)(?=(?:\d\d\d)+(?!\d))/// 123^456^789^Hz - use negative lookahead to exclude numbers
 
 
 /* Notes:
@@ -31,14 +27,11 @@ A negative matcher will match on nothing, a positive matcher will only match on 
 
 
 * */
-let H_commification_without_lookbehind = /(\d)(?=(\d\d\d))+(?!\d)/
+const H_commification_without_lookbehind = /(\d)(?=(\d\d\d))+(?!\d)/
+const I_quiz_commification_without_looking_does_it_work = /(\d)(\d\d\d)+\b/g
 
-let I_quiz_commification_without_looking_does_it_work = /(\d)(\d\d\d)+\b/g
-
-
-
-let A_big_number_quiz_result = A_big_number.replace(I_quiz_commification_without_looking_does_it_work,",")
-let A_big_number_quiz_result_array = [...A_big_number.matchAll(I_quiz_commification_without_looking_does_it_work)]
+const A_big_number_quiz_result = A_big_number.replace(I_quiz_commification_without_looking_does_it_work,",")
+const A_big_number_quiz_result_array = [...A_big_number.matchAll(I_quiz_commification_without_looking_does_it_work)]
 
 const exec_IA = I_quiz_commification_without_looking_does_it_work.exec(A_big_number)
 const exec_IAA = I_quiz_commification_without_looking_does_it_work.exec(AA_big_number_with_text)
