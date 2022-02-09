@@ -44,3 +44,26 @@ const B_some_letters = "abcde"
 // ... a bunch more sequntial variable through I_
 const J_a_pattern_to_do_something_regexxy_with_numbers = /(?:\d\d)+/
 ```
+
+
+# [PERL](https://www.perl.org/)
+There are also some perl scripts included because I thought it would be good to learn a little Perl. Also, some of 
+the examples do no readily convert to Javascript. In those instances I will use the actual example from the book.
+
+#Installing and running Perl
+
+Linux/Mac:
+If you are running a Unix based system, there is a good chance that Perl is already installed.
+The command `$: which perl` will tell you whether you have it.
+
+Otherwise, use your package manager to install the version supported by your flavor.
+
+Windows:
+You may have to install it the Windows way.
+
+[Get Perl Here](https://www.perl.org/get.html)
+
+Jetbrains IDE
+There is a Perl plugin. That will make it easier.
+You may encounter [this](https://stackoverflow.com/questions/57986919/interllij-idea-perl5-sdk-is-not-configured) issue.
+
