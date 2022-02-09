@@ -1,3 +1,5 @@
+// in Javascript, what Friedl calls a "charater class" is called a "range"
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
 let meta_beginning_of_line = '^';  // meta-characters have special purposes
 let meta_ending_of_line = '$';
 
