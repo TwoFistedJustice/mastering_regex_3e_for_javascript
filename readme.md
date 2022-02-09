@@ -8,7 +8,13 @@ I made this for myself as I went through the book and decided to make it public 
 
 ## Buy the book online from:
 note: these are affiliate links.
-- [Amazon](https://www.amazon.com/gp/product/0596528124/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=hooliatornet-20&creative=9325&linkCode=as2&creativeASIN=0596528124&linkId=f9e9b3e050a9e77696f0d34c943a4c0f)
+- [Amazon - affiliate link](https://www.amazon.com/gp/product/0596528124/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=hooliatornet-20&creative=9325&linkCode=as2&creativeASIN=0596528124&linkId=f9e9b3e050a9e77696f0d34c943a4c0f)
+
+
+These are non-affiliate links
+- [Amazon - non-affiliate link](https://www.amazon.com/gp/product/0596528124/)
+
+
 
 # Where to download egrep for Windows
 [grep for Windows](http://gnuwin32.sourceforge.net/packages/grep.htm)
