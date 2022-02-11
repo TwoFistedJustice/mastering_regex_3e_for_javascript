@@ -1,4 +1,4 @@
-#!/usr/bin/perl -l
+#!/usr/bin/perl -l  #without this perl leaves the console all messy
 # use strict;
 # use warnings;
 undef $/; # enter slurp mode
