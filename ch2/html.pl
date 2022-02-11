@@ -1,7 +1,7 @@
 # use strict;
 # use warnings;
 undef $/; # enter slurp mode
-
+$host_name_regex = qr/[-a-z0-9]+(\.[-a-z0-9]+)*\.(com|edu|info)/i;
 
 $text = <>; #Slurp up the first file given on the command line
 
@@ -21,7 +21,7 @@ $text =~ s{
      \w[-.\w]*
      \@
      # hostname regex
-     [-a-z0-9]+(\.[-a-z0-9]+)*\.(com|edu|info)
+     $host_name_regex
      )
      \b
    }{<a href="mailto:$1">$1</a>}gix;
@@ -30,7 +30,8 @@ $text =~ s{
 $text =~ s{\b
   # capture the url to $1
   (
-     http[s]?:// [-a-z0-9]+(\.[-a-z0-9]+)*\.(com|edu|info) \b #hostname
+     http[s]?://
+     $host_name_regex \b #hostname
      (
           / [-a-z0-9_:\@&?=+,.;!/~*'%\$]* #optional path (added semi-colon, not in book)
           (?<![.,?!])                    # not allowed to end with grammar punctuation
