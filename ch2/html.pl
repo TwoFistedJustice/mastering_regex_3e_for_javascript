@@ -1,3 +1,4 @@
+#!/usr/bin/perl -l
 # use strict;
 # use warnings;
 undef $/; # enter slurp mode
